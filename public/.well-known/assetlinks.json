@@ -1,0 +1,18 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ventures.layline.ordr",
+      "sha256_cert_fingerprints": [
+        "74:70:DB:DD:5A:16:05:B1:63:CB:15:FE:33:D1:BA:5E:8F:6D:7C:48",
+        "A6:67:E6:59:6F:0B:5A:88:22:15:30:52:A4:53:80:E7:84:62:64:F6",
+        "59:AF:9A:F5:5F:EA:78:61:5C:68:A9:6D:8D:B4:81:04:97:20:13:EA",
+        "64:D7:33:C8:3B:45:9F:07:FD:E0:B9:AE:95:80:BA:11:43:7A:B9:19:7B:90:FE:8D:89:FE:31:69:7B:F5:D6:D2"
+      ]
+    }
+  }
+]

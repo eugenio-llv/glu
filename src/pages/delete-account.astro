@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Delete Your Account - Glu">
+  <div class="min-h-screen bg-slate-50 text-slate-900">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/80 backdrop-blur-xl z-50 border-b border-slate-100">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 py-6">
+        <a href="/" class="inline-flex items-center gap-3">
+          <img src="/app_icon.png" alt="Glu" class="w-8 h-8 rounded-xl shadow-sm" />
+          <span class="font-sora text-lg font-semibold text-slate-900 tracking-tight">Glu</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-6 sm:px-8 pb-20">
+      <!-- Title -->
+      <div class="pt-16 sm:pt-24 pb-10 sm:pb-14">
+        <span class="inline-flex items-center gap-2 rounded-full bg-slate-900/5 text-slate-700 px-3 py-1 text-xs font-semibold tracking-[0.2em] uppercase">
+          Account Deletion
+        </span>
+        <h1 class="font-sora text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 mt-5 mb-3 tracking-tight">
+          Delete Your Account
+        </h1>
+        <p class="text-slate-500">Last updated: March 31, 2026</p>
+      </div>
+
+      <!-- Content -->
+      <div class="bg-white rounded-3xl border border-slate-100 shadow-[0_24px_60px_-50px_rgba(15,23,42,0.6)]">
+        <div class="px-6 sm:px-10 lg:px-12 py-10 sm:py-12">
+          <div class="font-dm-sans text-[15px] sm:text-base leading-relaxed sm:leading-loose text-slate-600 space-y-12">
+            <section class="border-b border-slate-100 pb-12 last:border-b-0 last:pb-0">
+              <h2 class="font-sora text-lg sm:text-xl font-semibold text-slate-900 mb-4">How to Request Deletion</h2>
+              <p class="mb-6">
+                This page explains how to request deletion of your Glu account and associated data from Layline Ventures.
+              </p>
+              <ol class="list-decimal pl-5 space-y-3 text-slate-600">
+                <li>
+                  Email us at
+                  <a href="mailto:glu@layline.ventures?subject=Delete%20my%20Glu%20account" class="text-slate-700 hover:text-slate-900 underline decoration-slate-200 underline-offset-4 transition-colors">glu@layline.ventures</a>
+                  with the subject: <span class="text-slate-700 font-medium">Delete my Glu account</span>.
+                </li>
+                <li>
+                  In your email, include:
+                  <ul class="list-disc pl-5 mt-3 space-y-2">
+                    <li>the email address used in Glu</li>
+                    <li>your request to delete your account and associated data</li>
+                  </ul>
+                </li>
+                <li>
+                  We may ask you to verify ownership of the account (for example, by replying from the same email address or confirming details from within the app).
+                </li>
+                <li>
+                  Once verified, we will process the deletion request and confirm by email when it is completed.
+                </li>
+              </ol>
+            </section>
+
+            <section class="border-b border-slate-100 pb-12 last:border-b-0 last:pb-0">
+              <h2 class="font-sora text-lg sm:text-xl font-semibold text-slate-900 mb-4">What Data Is Deleted</h2>
+              <p class="mb-6">When your deletion request is completed, we delete or de-identify the following data from our active systems:</p>
+              <ul class="list-disc pl-5 space-y-3 text-slate-600">
+                <li>Account profile information (such as name and email)</li>
+                <li>App content you created (such as reminders, dose logs, weight entries, meals, water, activity, symptom notes, and related metadata)</li>
+                <li>App preferences/settings associated with your account</li>
+                <li>Any files you uploaded to the Services (if applicable)</li>
+              </ul>
+            </section>
+
+            <section class="border-b border-slate-100 pb-12 last:border-b-0 last:pb-0">
+              <h2 class="font-sora text-lg sm:text-xl font-semibold text-slate-900 mb-4">What Data May Be Kept (and Why)</h2>
+              <p class="mb-6">
+                After deletion, we may retain limited information only as necessary for legal, security, and operational purposes. For example:
+              </p>
+              <ul class="list-disc pl-5 space-y-3 text-slate-600">
+                <li>
+                  <span class="text-slate-700 font-medium">Security and abuse prevention:</span>
+                  limited records needed to prevent fraud, detect abuse, and enforce our Terms.
+                </li>
+                <li>
+                  <span class="text-slate-700 font-medium">Legal compliance:</span>
+                  information required to comply with applicable laws, resolve disputes, or enforce agreements.
+                </li>
+                <li>
+                  <span class="text-slate-700 font-medium">Subscription-related records:</span>
+                  we do not store full payment card details (payments are handled by Apple App Store / Google Play), but we may retain limited purchase or subscription identifiers/status information to operate the paid features and handle support.
+                </li>
+                <li>
+                  <span class="text-slate-700 font-medium">Aggregated analytics:</span>
+                  aggregated or de-identified data that no longer identifies you.
+                </li>
+              </ul>
+            </section>
+
+            <section class="border-b border-slate-100 pb-12 last:border-b-0 last:pb-0">
+              <h2 class="font-sora text-lg sm:text-xl font-semibold text-slate-900 mb-4">Retention Periods</h2>
+              <ul class="list-disc pl-5 space-y-3 text-slate-600">
+                <li>
+                  <span class="text-slate-700 font-medium">Active systems:</span>
+                  we aim to delete or de-identify your account data from our active systems within <span class="text-slate-700 font-medium">30 days</span> after we verify your request.
+                </li>
+                <li>
+                  <span class="text-slate-700 font-medium">Backups:</span>
+                  backup copies may persist for up to <span class="text-slate-700 font-medium">90 days</span> before being overwritten.
+                </li>
+                <li>
+                  <span class="text-slate-700 font-medium">Limited retained records:</span>
+                  where we must keep certain information for legal, security, or operational reasons, we retain it only for as long as necessary for those purposes.
+                </li>
+              </ul>
+            </section>
+
+            <section class="border-b border-slate-100 pb-12 last:border-b-0 last:pb-0">
+              <h2 class="font-sora text-lg sm:text-xl font-semibold text-slate-900 mb-4">Need Help?</h2>
+              <p>
+                If you have questions about account deletion, contact us at
+                <a href="mailto:glu@layline.ventures?subject=Glu%20account%20deletion%20question" class="text-slate-700 hover:text-slate-900 underline decoration-slate-200 underline-offset-4 transition-colors">glu@layline.ventures</a>.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+</Layout>

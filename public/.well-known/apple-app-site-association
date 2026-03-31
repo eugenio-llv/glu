@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["X3WYVFTV38.ventures.layline.ordr"],
+        "components": [
+          {
+            "/": "/signin-callback",
+            "comment": "Ordr auth callback"
+          }
+        ]
+      }
+    ]
+  }
+}

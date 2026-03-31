@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myglu.health/sitemap.xml
+Sitemap: https://myglu.health/sitemap_index.xml
