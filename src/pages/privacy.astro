@@ -178,9 +178,16 @@ import Footer from '../components/Footer.astro';
                 We do not sell your personal information. We may share your data with:
               </p>
               <ul class="list-disc pl-5 space-y-3 text-slate-600">
-                <li><strong class="text-slate-700 font-medium">Service providers</strong> that help us operate the Services (for example, hosting, cloud storage, authentication, analytics, crash reporting, customer support, messaging, notification delivery, and subscription infrastructure)</li>
-                <li><strong class="text-slate-700 font-medium">Platform providers</strong> to process purchases and manage subscriptions</li>
-                <li><strong class="text-slate-700 font-medium">AI service providers</strong> (currently Google) to process content submitted for optional AI features, such as meal descriptions, goal context, and food photos you provide for Food Fit and Snap Macros. Depending on what you submit, this content may include personal data</li>
+                <li><strong class="text-slate-700 font-medium">Service providers</strong> that help us operate the Services, including:
+                  <ul class="list-disc pl-5 mt-2 space-y-1">
+                    <li><strong class="text-slate-700 font-medium">Supabase Inc.</strong> — database hosting, authentication, and backend infrastructure</li>
+                    <li><strong class="text-slate-700 font-medium">Google LLC</strong> — Firebase Analytics (usage analytics and crash reporting) and Firebase Cloud Messaging (push notification delivery)</li>
+                    <li><strong class="text-slate-700 font-medium">PostHog Inc.</strong> — product analytics and feature usage measurement</li>
+                    <li><strong class="text-slate-700 font-medium">RevenueCat Inc.</strong> — subscription management and entitlement verification</li>
+                  </ul>
+                </li>
+                <li><strong class="text-slate-700 font-medium">Platform providers</strong> (Apple App Store, Google Play) to process purchases and manage subscriptions</li>
+                <li><strong class="text-slate-700 font-medium">AI service providers</strong> (currently Google LLC via Google AI Studio / Gemini APIs) to process content submitted for optional AI features, such as meal descriptions, goal context, and food photos you provide for Food Fit and Snap Macros. Depending on what you submit, this content may include personal data</li>
                 <li><strong class="text-slate-700 font-medium">Legal requirements</strong> when required by law</li>
               </ul>
               <p class="mt-6">
