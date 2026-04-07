@@ -13,18 +13,5 @@
         "9F:E9:98:F9:F5:0C:94:15:21:28:92:B4:B9:4B:1C:DA:FE:87:33:87:E3:28:72:A2:6B:DE:0B:77:35:6E:A2:FF"
       ]
     }
-  },
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls",
-      "delegate_permission/common.get_login_creds"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "ventures.layline.glu",
-      "sha256_cert_fingerprints": [
-        "9F:E9:98:F9:F5:0C:94:15:21:28:92:B4:B9:4B:1C:DA:FE:87:33:87:E3:28:72:A2:6B:DE:0B:77:35:6E:A2:FF"
-      ]
-    }
   }
 ]
