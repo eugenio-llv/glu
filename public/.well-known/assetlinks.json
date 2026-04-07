@@ -6,12 +6,24 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "ventures.layline.ordr",
+      "package_name": "ventures.layline.glu",
       "sha256_cert_fingerprints": [
-        "74:70:DB:DD:5A:16:05:B1:63:CB:15:FE:33:D1:BA:5E:8F:6D:7C:48",
-        "A6:67:E6:59:6F:0B:5A:88:22:15:30:52:A4:53:80:E7:84:62:64:F6",
-        "59:AF:9A:F5:5F:EA:78:61:5C:68:A9:6D:8D:B4:81:04:97:20:13:EA",
-        "64:D7:33:C8:3B:45:9F:07:FD:E0:B9:AE:95:80:BA:11:43:7A:B9:19:7B:90:FE:8D:89:FE:31:69:7B:F5:D6:D2"
+        "9F:79:77:46:8A:C5:80:2A:ED:82:38:54:C4:06:23:17:88:E3:B6:0F:79:4B:47:12:8D:0F:39:E9:93:D1:06:F5",
+        "53:A7:7F:E4:93:75:E7:0E:AC:CA:FC:97:92:53:C2:06:AE:74:CB:70:1E:A6:4A:70:38:7D:4C:8D:31:6F:80:DE",
+        "9F:E9:98:F9:F5:0C:94:15:21:28:92:B4:B9:4B:1C:DA:FE:87:33:87:E3:28:72:A2:6B:DE:0B:77:35:6E:A2:FF"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ventures.layline.glu",
+      "sha256_cert_fingerprints": [
+        "9F:E9:98:F9:F5:0C:94:15:21:28:92:B4:B9:4B:1C:DA:FE:87:33:87:E3:28:72:A2:6B:DE:0B:77:35:6E:A2:FF"
       ]
     }
   }

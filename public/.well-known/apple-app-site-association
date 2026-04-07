@@ -2,11 +2,11 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["X3WYVFTV38.ventures.layline.ordr"],
+        "appIDs": ["X3WYVFTV38.ventures.layline.glu"],
         "components": [
           {
             "/": "/signin-callback",
-            "comment": "Ordr auth callback"
+            "comment": "Glu auth callback"
           }
         ]
       }
