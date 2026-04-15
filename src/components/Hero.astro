@@ -65,6 +65,7 @@ import phoneDemo from '../assets/landing-page/phone-demo.png';
             href="https://play.google.com/store/apps/details?id=ventures.layline.glu"
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-store="google_play"
             class="inline-flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-900 px-5 py-3 shadow-[0_18px_35px_-24px_rgba(15,23,42,0.55)]"
           >
             <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -85,6 +86,7 @@ import phoneDemo from '../assets/landing-page/phone-demo.png';
             href="https://apps.apple.com/br/app/glu-glp-1-weight-loss-tracker/id6761419458"
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-store="app_store"
             class="inline-flex items-center gap-3 rounded-xl border border-slate-200/80 bg-white px-5 py-3 shadow-[0_18px_35px_-24px_rgba(15,23,42,0.18)]"
           >
             <svg class="h-6 w-6 shrink-0 text-slate-700" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -119,3 +121,21 @@ import phoneDemo from '../assets/landing-page/phone-demo.png';
   </div>
 </section>
 
+<script is:inline>
+  const storeBadgeLinks = document.querySelectorAll('[data-analytics-store]');
+
+  storeBadgeLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (typeof window.gtag !== 'function') {
+        return;
+      }
+
+      window.gtag('event', 'qualify_lead', {
+        description: 'ProductDescription',
+        store: link.getAttribute('data-analytics-store'),
+        location: 'home_hero',
+        transport_type: 'beacon',
+      });
+    });
+  });
+</script>
