@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getImage } from 'astro:assets';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import Showcase from '../components/Showcase.astro';
@@ -10,6 +11,18 @@ import homeTrackers from '../assets/landing-page/home_trackers.png';
 
 const description =
   'Glu is a GLP-1 tracker for reminders, dose history, weight trends, side effects, meals, water, and daily progress.';
+
+const heroPreload = await getImage({
+  src: homeTrackers,
+  width: 480,
+  format: 'webp',
+});
+
+const heroPreloadLarge = await getImage({
+  src: homeTrackers,
+  width: 860,
+  format: 'webp',
+});
 
 const structuredData = [
   {
@@ -58,7 +71,12 @@ const structuredData = [
   title="Glu | GLP-1 Tracker for Daily Progress"
   description={description}
   structuredData={structuredData}
-  preloadImage={homeTrackers.src}
+  preloadImage={{
+    href: heroPreload.src,
+    srcset: `${heroPreload.src} 480w, ${heroPreloadLarge.src} 860w`,
+    sizes: '(min-width: 1024px) 430px, 360px',
+    type: 'image/webp',
+  }}
 >
   <div class="relative min-h-screen bg-surface text-slate-900">
     <Nav />

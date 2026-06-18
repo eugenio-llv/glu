@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/schibsted-grotesk';
 import '../styles/global.css'
+import schibstedGroteskLatin from '@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2';
 
 interface Props {
   title: string;
@@ -9,7 +10,12 @@ interface Props {
   robots?: string;
   ogImage?: string;
   ogType?: string;
-  preloadImage?: string;
+  preloadImage?: {
+    href: string;
+    srcset?: string;
+    sizes?: string;
+    type?: string;
+  };
   structuredData?: object | object[];
 }
 
@@ -47,7 +53,23 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <meta name="twitter:image" content={ogImageUrl.href} />
     <link rel="icon" type="image/png" href="/app_icon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/app_icon.png" />
-    {preloadImage && <link rel="preload" as="image" href={preloadImage} />}
+    <link
+      rel="preload"
+      as="font"
+      href={schibstedGroteskLatin}
+      type="font/woff2"
+      crossorigin
+    />
+    {preloadImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadImage.href}
+        imagesrcset={preloadImage.srcset}
+        imagesizes={preloadImage.sizes}
+        type={preloadImage.type}
+      />
+    )}
     {
       structuredData && (
         <script

@@ -8,8 +8,8 @@ import progressAll from "../assets/landing-page/progress_all.png";
 import glowUp from "../assets/landing-page/glow_up.png";
 import progressWeight from "../assets/landing-page/progress_weight.png";
 
+const primarySlide = { src: homeTrackers, alt: "Glu home trackers screen" };
 const carouselSlides = [
-    { src: homeTrackers, alt: "Glu home trackers screen" },
     { src: journeyInsight, alt: "Glu journey insight screen" },
     { src: portionCheck, alt: "Glu portion check screen" },
     { src: progressAll, alt: "Glu progress overview screen" },
@@ -89,26 +89,33 @@ const carouselSlides = [
                             <div
                                 class="relative aspect-[1250/2532] w-full overflow-hidden"
                             >
+                                <Image
+                                    data-carousel-slide
+                                    src={primarySlide.src}
+                                    alt={primarySlide.alt}
+                                    class="absolute inset-0 h-full w-full object-cover object-top transition-all duration-700 ease-out-quint motion-reduce:transition-none opacity-100"
+                                    widths={[480, 860]}
+                                    sizes="(min-width: 1024px) 430px, 360px"
+                                    format="webp"
+                                    loading="eager"
+                                    fetchpriority="high"
+                                    decoding="async"
+                                    data-carousel-index={0}
+                                />
                                 {
                                     carouselSlides.map((slide, index) => (
                                         <Image
                                             data-carousel-slide
                                             src={slide.src}
                                             alt={slide.alt}
-                                            class={`absolute inset-0 h-full w-full object-cover object-top transition-all duration-700 ease-out-quint motion-reduce:transition-none ${
-                                                index === 0
-                                                    ? "opacity-100"
-                                                    : "opacity-0"
-                                            }`}
+                                            class="absolute inset-0 h-full w-full object-cover object-top transition-all duration-700 ease-out-quint motion-reduce:transition-none opacity-0"
                                             widths={[480, 860]}
                                             sizes="(min-width: 1024px) 430px, 360px"
                                             format="webp"
-                                            loading={index === 0 ? "eager" : "lazy"}
-                                            fetchpriority={
-                                                index === 0 ? "high" : "auto"
-                                            }
+                                            loading="lazy"
+                                            fetchpriority="low"
                                             decoding="async"
-                                            data-carousel-index={index}
+                                            data-carousel-index={index + 1}
                                         />
                                     ))
                                 }
@@ -128,7 +135,7 @@ const carouselSlides = [
 
                                 <div class="flex items-center gap-2">
                                     {
-                                        carouselSlides.map((slide, index) => (
+                                        [primarySlide, ...carouselSlides].map((slide, index) => (
                                             <button
                                                 type="button"
                                                 data-carousel-dot
@@ -156,7 +163,7 @@ const carouselSlides = [
 
                             <div class="absolute inset-x-0 top-3.5 flex items-center justify-center gap-2 sm:hidden">
                                 {
-                                    carouselSlides.map((slide, index) => (
+                                    [primarySlide, ...carouselSlides].map((slide, index) => (
                                         <button
                                             type="button"
                                             data-carousel-dot
