@@ -6,9 +6,46 @@ import Showcase from '../components/Showcase.astro';
 import Trust from '../components/Trust.astro';
 import Cta from '../components/Cta.astro';
 import Footer from '../components/Footer.astro';
+
+const description =
+  'Glu is a GLP-1 tracker for reminders, dose history, weight trends, side effects, meals, water, and daily progress.';
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Glu',
+    url: 'https://myglu.health',
+    logo: 'https://myglu.health/app_icon.png',
+    email: 'support@myglu.health',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Glu',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'iOS, Android',
+    description,
+    url: 'https://myglu.health',
+    image: 'https://myglu.health/app_icon.png',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    downloadUrl: [
+      'https://play.google.com/store/apps/details?id=ventures.layline.glu',
+      'https://apps.apple.com/br/app/glu-glp-1-weight-loss-tracker/id6761419458?l=en-GB',
+    ],
+  },
+];
 ---
 
-<Layout title="Glu | GLP-1 Tracker">
+<Layout
+  title="Glu | GLP-1 Tracker for Daily Progress"
+  description={description}
+  structuredData={structuredData}
+>
   <div class="relative min-h-screen bg-surface text-slate-900">
     <Nav />
     <Hero />

@@ -10,6 +10,7 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   preloadImage?: string;
+  structuredData?: object | object[];
 }
 
 const {
@@ -19,7 +20,8 @@ const {
   robots = 'index,follow',
   ogImage = '/app_icon.png',
   ogType = 'website',
-  preloadImage
+  preloadImage,
+  structuredData
 } = Astro.props;
 
 const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
@@ -39,9 +41,21 @@ const ogImageUrl = new URL(ogImage, Astro.site);
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl.href} />
     <meta property="og:image" content={ogImageUrl.href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl.href} />
     <link rel="icon" type="image/png" href="/app_icon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/app_icon.png" />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} />}
+    {
+      structuredData && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVFD5F9PKH"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
